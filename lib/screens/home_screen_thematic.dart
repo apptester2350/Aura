@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:aura_launcher/widgets/app_grid.dart';
 import 'package:aura_launcher/widgets/voice_assistant.dart';
+import 'package:aura_launcher/engines/theme_engine.dart';
+import 'package:aura_launcher/core/launcher_controller.dart';
 
 class ThemedHomeScreen extends StatefulWidget {
   const ThemedHomeScreen({super.key});
@@ -10,19 +13,29 @@ class ThemedHomeScreen extends StatefulWidget {
 }
 
 class _ThemedHomeScreenState extends State<ThemedHomeScreen> {
-  Color bgColor = Colors.black;
-  Color accent = Colors.deepPurple;
+  Theme? activeTheme;
 
   @override
   void initState() {
     super.initState();
-    // Theme applied: Neon Cyber / Glass Aurora
-    bgColor = const Color(0xFF090713);
-    accent = const Color(0xFFA78BFA);
+    loadTheme();
+  }
+
+  Future<void> loadTheme() async {
+    final theme = await ThemeEngine.loadTheme('theme_001_neon_cyber');
+    if (mounted) {
+      setState(() {
+        activeTheme = theme;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    final dark = context.watch<LauncherController>().dark;
+    final bgColor = dark ? const Color(0xFF090713) : const Color(0xFFF5F5F5);
+    final accent = dark ? const Color(0xFFA78BFA) : Colors.deepPurple;
+
     return Scaffold(
       backgroundColor: bgColor,
       body: SafeArea(
