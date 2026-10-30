@@ -1,0 +1,23 @@
+{
+  "template_id": "theme_002_glass_aurora",
+  "name": "Glass Aurora",
+  "category": "Glassmorphism",
+  "version": 1,
+  "style": {
+    "background": "#0D0D1B",
+    "accent": "#87CEEB",
+    "corner_radius": 24,
+    "glass_blur": 8,
+    "font_family": "system"
+  },
+  "layout": {
+    "columns": 4,
+    "rows": 5,
+    "clock_position": "center"
+  },
+  "animation": {
+    "shader": "cosmic_orbit",
+    "enabled": true,
+    "intensity": 0.35
+  }
+}

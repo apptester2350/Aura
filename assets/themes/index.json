@@ -1,0 +1,16 @@
+[
+  {
+    "template_id": "theme_001_neon_cyber",
+    "name": "Neon Cyber",
+    "category": "Cyberpunk",
+    "version": 1,
+    "file": "theme_001_neon_cyber.json"
+  },
+  {
+    "template_id": "theme_002_glass_aurora",
+    "name": "Glass Aurora",
+    "category": "Glassmorphism",
+    "version": 1,
+    "file": "theme_002_glass_aurora.json"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": ["template_id", "name", "style", "layout", "animation"],
+  "properties": {
+    "template_id": {"type": "string"},
+    "name": {"type": "string"},
+    "category": {"type": "string"},
+    "version": {"type": "integer"},
+    "style": {
+      "type": "object",
+      "properties": {
+        "background": {"type": "string"},
+        "accent": {"type": "string"},
+        "corner_radius": {"type": "integer"},
+        "glass_blur": {"type": "integer"},
+        "font_family": {"type": "string"}
+      }
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "columns": {"type": "integer"},
+        "rows": {"type": "integer"},
+        "clock_position": {"type": "string"}
+      }
+    },
+    "animation": {
+      "type": "object",
+      "properties": {
+        "shader": {"type": "string"},
+        "enabled": {"type": "boolean"},
+        "intensity": {"type": "number"}
+      }
+    }
+  }
+}

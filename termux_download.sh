@@ -1,0 +1,23 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Termux Download APK Script
+
+echo "=== AuraLauncher APK Download (Mobile Only) ==="
+echo "1. Push try1/ folder to GitHub:"
+echo "   git init; git add .; git commit -m 'build'; git push"
+echo ""
+echo "2. GitHub Actions will build APK (10-15 min)"
+echo "3. Download with these commands:"
+echo ""
+echo "   pkg install git wget curl"
+echo "   cd ~"
+echo ""
+echo "4. After build completes, download APK:"
+echo "   wget https://github.com/YOUR_USERNAME/YOUR_REPO/actions/runs/LATEST/download -O aura.apk"
+echo ""
+echo "OR open this URL in Termux browser:"
+echo "   termux-open-url https://github.com/YOUR_USERNAME/YOUR_REPO/actions"
+echo ""
+echo "Then install:"
+echo "   pm install -r aura.apk"
+echo ""
+echo "Note: Replace YOUR_USERNAME/YOUR_REPO with your GitHub details!"

@@ -1,0 +1,23 @@
+{
+  "template_id": "theme_001_neon_cyber",
+  "name": "Neon Cyber",
+  "category": "Cyberpunk",
+  "version": 1,
+  "style": {
+    "background": "#090713",
+    "accent": "#A78BFA",
+    "corner_radius": 20,
+    "glass_blur": 10,
+    "font_family": "system"
+  },
+  "layout": {
+    "columns": 5,
+    "rows": 6,
+    "clock_position": "top"
+  },
+  "animation": {
+    "shader": "aurora_wave",
+    "enabled": true,
+    "intensity": 0.45
+  }
+}
